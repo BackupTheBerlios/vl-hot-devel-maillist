@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [vl-hot-devel] how to make vl-hot for debain ?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/vl-hot-devel/2009-May/index.html" >
+   <LINK REL="made" HREF="mailto:vl-hot-devel%40lists.berlios.de?Subject=Re%3A%20%5Bvl-hot-devel%5D%20how%20to%20make%20vl-hot%20for%20debain%20%3F&In-Reply-To=%3C4A1138EE.6020603%40unlimitedmail.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000002.html">
+   <LINK REL="Next"  HREF="000000.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[vl-hot-devel] how to make vl-hot for debain ?</H1>
+    <B>JOYDEEP</B> 
+    <A HREF="mailto:vl-hot-devel%40lists.berlios.de?Subject=Re%3A%20%5Bvl-hot-devel%5D%20how%20to%20make%20vl-hot%20for%20debain%20%3F&In-Reply-To=%3C4A1138EE.6020603%40unlimitedmail.org%3E"
+       TITLE="[vl-hot-devel] how to make vl-hot for debain ?">j.bakshi at unlimitedmail.org
+       </A><BR>
+    <I>Mon May 18 12:31:10 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000002.html">[vl-hot-devel] how to make vl-hot for debain ?
+</A></li>
+        <LI>Next message: <A HREF="000000.html">[vl-hot-devel] how to make vl-hot for debain ?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jose J. Rodriguez wrote:
+&gt;<i> On 5/11/09, JOYDEEP &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/vl-hot-devel">j.bakshi at unlimitedmail.org</A>&gt; wrote:
+</I>&gt;<i>   
+</I>&gt;&gt;<i> Dear list,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>  I have recently come to know about the vl-hot ( vxmount as known
+</I>&gt;&gt;<i>  presently ). I am very much interested to try this tool. I personally
+</I>&gt;&gt;<i>  work to design light-weight linux system and continuously searching for
+</I>&gt;&gt;<i>  light weight tools. My previous work on this direction can be seen at
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>  <A HREF="http://jbakshi.50webs.com/linuxproject.html">http://jbakshi.50webs.com/linuxproject.html</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>  devicekit is already the replacement of HAL but I wonder how fast it can
+</I>&gt;&gt;<i>  run w.r.t  HAL. On the other hand vl-hot is really a great promising
+</I>&gt;&gt;<i>  tool if we just overlook the CD/DVD detection ( as udev can't generate
+</I>&gt;&gt;<i>  event for this ).  But after searching lot I have not found any source
+</I>&gt;&gt;<i>  which can be used to compile  vl-hot on other distro. I like to use
+</I>&gt;&gt;<i>  vl-hot in debian. How can I get the source or is there already any .deb
+</I>&gt;&gt;<i>  package for it ? Also like to know how vl-hot wil work with idesk ? My
+</I>&gt;&gt;<i>  combination is  icewm+idesk
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> Sorry to take so long to reply, but I was out of town. You can
+</I>&gt;<i> probably use vl-hot on Debian, or any typical distro, though AFAIK it
+</I>&gt;<i> has only been tested on VL and Slackware.
+</I>&gt;<i>
+</I>&gt;<i> The core of vl-hot is a set of bash scripts, so no compilation is
+</I>&gt;<i> needed. A manual installation guide is(was?) on the old GoogleCode
+</I>&gt;<i> project page, which I can unfortunately no longer access, since Google
+</I>&gt;<i> has blocked access from my country (The reason I moved to Berlios).
+</I>&gt;<i> Anyway, the simplest way to figure out where everything should go is
+</I>&gt;<i> to download the latest VL packages for vl-hot and vl-hot-config from
+</I>&gt;<i> Berlios and open them in an archiver utility. The scripts are in the
+</I>&gt;<i> vl-hot subdirectory of the project and you will also need to set up
+</I>&gt;<i> the udev rules from the udev-rules subdirectory as well as the config
+</I>&gt;<i> files in the conf subdirectory.
+</I>&gt;<i>
+</I>&gt;<i> The configuration GUI is a different matter, as it is programmed in
+</I>&gt;<i> Gambas2. You need to install Gambas2 for your distro and compile the
+</I>&gt;<i> project source code (which resides in the vl-hot-config subdirectory
+</I>&gt;<i> of the project). There are also desktop launcher files as well as
+</I>&gt;<i> icons and sounds to install.
+</I>&gt;<i>
+</I>&gt;<i> You will need to download the source code from the Berlios subversion
+</I>&gt;<i> repository for the project, as I have not set it up to release source
+</I>&gt;<i> tarballs yet. Simply set up an empty working directory and execute the
+</I>&gt;<i> following command in a terminal inside that directory:
+</I>&gt;<i>
+</I>&gt;<i> svn checkout <A HREF="http://svn.berlios.de/svnroot/repos/vl-hot/trunk">http://svn.berlios.de/svnroot/repos/vl-hot/trunk</A>
+</I>&gt;<i>
+</I>&gt;<i> You may instead wish to download the latest release tag, from
+</I>&gt;<i> <A HREF="http://svn.berlios.de/svnroot/repos/vl-hot/tags/release-x.x.x">http://svn.berlios.de/svnroot/repos/vl-hot/tags/release-x.x.x</A>
+</I>&gt;<i> (currently 2.0.0).
+</I>&gt;<i>
+</I>&gt;<i> You may contact me directly for any further questions, etc.
+</I>&gt;<i>   
+</I>
+Hello Jose,
+
+thanks a lot for your kind and descriptive email. I am really interested
+to use vl-hot in debian as well as make a .deb package so that debian
+users can test it.  I have already downloaded the latest release version
+2.0.
+
+1&gt; I have found udev-rules/10-vl-hot.rules.   I think I should place it
+in my udev-rules directory
+
+2&gt; there is a conf directory containing
+
+        vl-hot.conf  vl-hot_names.conf
+
+
+It seems  vl-hot.conf has icon and sound path with some other
+configuration like atime etc........        and    vl-hot_names.conf
+identify devices with ID ( ? not sure ).  where to place  these 2 files ?
+
+3&gt; launchers has KDE Desktop configuration, right ? My combination is
+icewm +idesk.  please help
+
+4&gt; vl-hot folder has mount/unmount script for Desktop icons I think. How
+to call these ?
+
+Thanks once again :-)
+
+
+
+&gt;<i> Regards,
+</I>&gt;<i> Joe1962
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> vl-hot-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/vl-hot-devel">vl-hot-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/vl-hot-devel">https://lists.berlios.de/mailman/listinfo/vl-hot-devel</A>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000002.html">[vl-hot-devel] how to make vl-hot for debain ?
+</A></li>
+	<LI>Next message: <A HREF="000000.html">[vl-hot-devel] how to make vl-hot for debain ?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/vl-hot-devel">More information about the vl-hot-devel
+mailing list</a><br>
+</body></html>

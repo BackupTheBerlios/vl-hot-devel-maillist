@@ -1,0 +1,230 @@
+From joydeep at infoservices.in  Mon May 11 15:19:20 2009
+From: joydeep at infoservices.in (J. Bakshi)
+Date: Mon, 11 May 2009 18:49:20 +0530
+Subject: [vl-hot-devel] how to make vl-hot for debain ?
+Message-ID: <4A0825D8.2070403@infoservices.in>
+
+Dear list,
+
+I have recently come to know about the vl-hot ( vxmount as known
+presently ). I am very much interested to try this tool. I personally
+work to design light-weight linux system and continuously searching for
+light weight tools. My previous work on this direction can be seen at
+
+http://jbakshi.50webs.com/linuxproject.html
+
+devicekit is already the replacement of HAL but I wonder how fast it can
+run w.r.t  HAL. On the other hand vl-hot is really a great promising
+tool if we just overlook the CD/DVD detection ( as udev can't generate
+event for this ).  But after searching lot I have not found any source
+which can be used to compile  vl-hot on other distro. I like to use
+vl-hot in debian. How can I get the source or is there already any .deb
+package for it ? Also like to know how vl-hot wil work with idesk ? My
+combination is  icewm+idesk
+
+Kindly suggest.
+Thanks
+
+
+
+From j.bakshi at unlimitedmail.org  Mon May 11 14:37:32 2009
+From: j.bakshi at unlimitedmail.org (JOYDEEP)
+Date: Mon, 11 May 2009 18:07:32 +0530
+Subject: [vl-hot-devel] how to make vl-hot for debain ?
+Message-ID: <4A081C0C.8050804@unlimitedmail.org>
+
+Dear list,
+
+I have recently come to know about the vl-hot ( vxmount as known
+presently ). I am very much interested to try this tool. I personally
+work to design light-weight linux system and continuously searching for 
+light weight tools. My previous work on this direction can be seen at
+
+http://jbakshi.50webs.com/linuxproject.html
+
+devicekit is already the replacement of HAL but I wonder how fast it can
+run w.r.t  HAL. On the other hand vl-hot is really a great promising
+tool if we just overlook the CD/DVD detection ( as udev can't generate
+event for this ).  But after searching lot I have not found any source
+which can be used to compile  vl-hot on other distro. I like to use
+vl-hot in debian. How can I get the source or is there already any .deb
+package for it ? Also like to know how vl-hot wil work with idesk ? My
+combination is  icewm+idesk
+
+Kindly suggest.
+Thanks
+
+
+From joe1962 at gmail.com  Fri May 15 22:01:42 2009
+From: joe1962 at gmail.com (Jose J. Rodriguez)
+Date: Fri, 15 May 2009 16:01:42 -0400
+Subject: [vl-hot-devel] how to make vl-hot for debain ?
+In-Reply-To: <4A081C0C.8050804@unlimitedmail.org>
+References: <4A081C0C.8050804@unlimitedmail.org>
+Message-ID: <6c208f950905151301u14218daeg98a115f3ea80cd42@mail.gmail.com>
+
+On 5/11/09, JOYDEEP <j.bakshi at unlimitedmail.org> wrote:
+> Dear list,
+>
+>  I have recently come to know about the vl-hot ( vxmount as known
+>  presently ). I am very much interested to try this tool. I personally
+>  work to design light-weight linux system and continuously searching for
+>  light weight tools. My previous work on this direction can be seen at
+>
+>  http://jbakshi.50webs.com/linuxproject.html
+>
+>  devicekit is already the replacement of HAL but I wonder how fast it can
+>  run w.r.t  HAL. On the other hand vl-hot is really a great promising
+>  tool if we just overlook the CD/DVD detection ( as udev can't generate
+>  event for this ).  But after searching lot I have not found any source
+>  which can be used to compile  vl-hot on other distro. I like to use
+>  vl-hot in debian. How can I get the source or is there already any .deb
+>  package for it ? Also like to know how vl-hot wil work with idesk ? My
+>  combination is  icewm+idesk
+>
+
+Sorry to take so long to reply, but I was out of town. You can
+probably use vl-hot on Debian, or any typical distro, though AFAIK it
+has only been tested on VL and Slackware.
+
+The core of vl-hot is a set of bash scripts, so no compilation is
+needed. A manual installation guide is(was?) on the old GoogleCode
+project page, which I can unfortunately no longer access, since Google
+has blocked access from my country (The reason I moved to Berlios).
+Anyway, the simplest way to figure out where everything should go is
+to download the latest VL packages for vl-hot and vl-hot-config from
+Berlios and open them in an archiver utility. The scripts are in the
+vl-hot subdirectory of the project and you will also need to set up
+the udev rules from the udev-rules subdirectory as well as the config
+files in the conf subdirectory.
+
+The configuration GUI is a different matter, as it is programmed in
+Gambas2. You need to install Gambas2 for your distro and compile the
+project source code (which resides in the vl-hot-config subdirectory
+of the project). There are also desktop launcher files as well as
+icons and sounds to install.
+
+You will need to download the source code from the Berlios subversion
+repository for the project, as I have not set it up to release source
+tarballs yet. Simply set up an empty working directory and execute the
+following command in a terminal inside that directory:
+
+svn checkout http://svn.berlios.de/svnroot/repos/vl-hot/trunk
+
+You may instead wish to download the latest release tag, from
+http://svn.berlios.de/svnroot/repos/vl-hot/tags/release-x.x.x
+(currently 2.0.0).
+
+You may contact me directly for any further questions, etc.
+
+Regards,
+Joe1962
+
+
+From j.bakshi at unlimitedmail.org  Mon May 18 12:31:10 2009
+From: j.bakshi at unlimitedmail.org (JOYDEEP)
+Date: Mon, 18 May 2009 16:01:10 +0530
+Subject: [vl-hot-devel] how to make vl-hot for debain ?
+In-Reply-To: <6c208f950905151301u14218daeg98a115f3ea80cd42@mail.gmail.com>
+References: <4A081C0C.8050804@unlimitedmail.org>
+	<6c208f950905151301u14218daeg98a115f3ea80cd42@mail.gmail.com>
+Message-ID: <4A1138EE.6020603@unlimitedmail.org>
+
+Jose J. Rodriguez wrote:
+> On 5/11/09, JOYDEEP <j.bakshi at unlimitedmail.org> wrote:
+>   
+>> Dear list,
+>>
+>>  I have recently come to know about the vl-hot ( vxmount as known
+>>  presently ). I am very much interested to try this tool. I personally
+>>  work to design light-weight linux system and continuously searching for
+>>  light weight tools. My previous work on this direction can be seen at
+>>
+>>  http://jbakshi.50webs.com/linuxproject.html
+>>
+>>  devicekit is already the replacement of HAL but I wonder how fast it can
+>>  run w.r.t  HAL. On the other hand vl-hot is really a great promising
+>>  tool if we just overlook the CD/DVD detection ( as udev can't generate
+>>  event for this ).  But after searching lot I have not found any source
+>>  which can be used to compile  vl-hot on other distro. I like to use
+>>  vl-hot in debian. How can I get the source or is there already any .deb
+>>  package for it ? Also like to know how vl-hot wil work with idesk ? My
+>>  combination is  icewm+idesk
+>>
+>>     
+>
+> Sorry to take so long to reply, but I was out of town. You can
+> probably use vl-hot on Debian, or any typical distro, though AFAIK it
+> has only been tested on VL and Slackware.
+>
+> The core of vl-hot is a set of bash scripts, so no compilation is
+> needed. A manual installation guide is(was?) on the old GoogleCode
+> project page, which I can unfortunately no longer access, since Google
+> has blocked access from my country (The reason I moved to Berlios).
+> Anyway, the simplest way to figure out where everything should go is
+> to download the latest VL packages for vl-hot and vl-hot-config from
+> Berlios and open them in an archiver utility. The scripts are in the
+> vl-hot subdirectory of the project and you will also need to set up
+> the udev rules from the udev-rules subdirectory as well as the config
+> files in the conf subdirectory.
+>
+> The configuration GUI is a different matter, as it is programmed in
+> Gambas2. You need to install Gambas2 for your distro and compile the
+> project source code (which resides in the vl-hot-config subdirectory
+> of the project). There are also desktop launcher files as well as
+> icons and sounds to install.
+>
+> You will need to download the source code from the Berlios subversion
+> repository for the project, as I have not set it up to release source
+> tarballs yet. Simply set up an empty working directory and execute the
+> following command in a terminal inside that directory:
+>
+> svn checkout http://svn.berlios.de/svnroot/repos/vl-hot/trunk
+>
+> You may instead wish to download the latest release tag, from
+> http://svn.berlios.de/svnroot/repos/vl-hot/tags/release-x.x.x
+> (currently 2.0.0).
+>
+> You may contact me directly for any further questions, etc.
+>   
+
+Hello Jose,
+
+thanks a lot for your kind and descriptive email. I am really interested
+to use vl-hot in debian as well as make a .deb package so that debian
+users can test it.  I have already downloaded the latest release version
+2.0.
+
+1> I have found udev-rules/10-vl-hot.rules.   I think I should place it
+in my udev-rules directory
+
+2> there is a conf directory containing
+
+        vl-hot.conf  vl-hot_names.conf
+
+
+It seems  vl-hot.conf has icon and sound path with some other
+configuration like atime etc........        and    vl-hot_names.conf
+identify devices with ID ( ? not sure ).  where to place  these 2 files ?
+
+3> launchers has KDE Desktop configuration, right ? My combination is
+icewm +idesk.  please help
+
+4> vl-hot folder has mount/unmount script for Desktop icons I think. How
+to call these ?
+
+Thanks once again :-)
+
+
+
+> Regards,
+> Joe1962
+> _______________________________________________
+> vl-hot-devel mailing list
+> vl-hot-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/vl-hot-devel
+>
+>   
+
+
+
